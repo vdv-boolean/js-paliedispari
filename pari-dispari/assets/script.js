@@ -32,25 +32,35 @@ const pcNum = getRandomNumber(min, max);
 console.log('Pc number: ' + pcNum); 
 
 // Sum of two numbers
-
 const sumNum = userNum + pcNum;
 
 console.log('Somma: ' + sumNum);
 
 // Check if sum is even or odd
-
-if (sumNum % 2 == 0) {
+let esite
+if (isEven(sumNum)) {
+    esite = 'pari'
     console.log('La somma è un numero pari')
 } else {
     console.log('La somma è un numero dispari')
 }
 
+// Declare if user won or not
+if (esite == userChoice) {
+    console.log('%cHai vinto!', 'color: green')
+} else {
+    console.log('%cHai perso!', 'color: red')
+}
 
 /**************
  * Functions
 ***************/
 
-function getRandomNumber() {
+function getRandomNumber(min, max) {
     return Math.floor(Math.random() * (max - min + 1) ) + min;
   }
+
+function isEven(number) {
+  return number % 2 == 0;
+}
 
