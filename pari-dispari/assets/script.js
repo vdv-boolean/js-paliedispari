@@ -14,3 +14,13 @@ while (userNum > 6) {
 }
 console.log('User number: ' + userNum); 
 
+// Get random number between 1 and 5
+const pcNum = Math.floor(Math.random() * (5 - 1) ) + 1;
+
+console.log('Pc number: ' + pcNum); 
+
+// Sum of two numbers
+
+const sumNum = userNum + pcNum;
+
+console.log('Somma: ' + sumNum);
