@@ -27,7 +27,7 @@ while (!(userNum >= min && userNum <= max)) {
 console.log('User number: ' + userNum); 
 
 // Get random number between 1 and 5
-const pcNum = Math.floor(Math.random() * (max - min) ) + min;
+const pcNum = getRandomNumber(min, max);
 
 console.log('Pc number: ' + pcNum); 
 
@@ -46,5 +46,11 @@ if (sumNum % 2 == 0) {
 }
 
 
+/**************
+ * Functions
+***************/
 
+function getRandomNumber() {
+    return Math.floor(Math.random() * (max - min + 1) ) + min;
+  }
 
