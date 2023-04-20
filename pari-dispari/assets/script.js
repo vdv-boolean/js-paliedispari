@@ -16,15 +16,18 @@ while (!~["pari", "dispari"].indexOf(userChoice)) {
 console.log('Hai scelto: ' + userChoice)
 
 //Ask to user a number between 1 and 5
+const min = 1;
+const max = 5;
+
 let userNum = parseInt(prompt('Dammi un numero tra 1 e 5'));
 
-while (userNum > 6) {
+while (!(userNum >= min && userNum <= max)) {
     userNum = parseInt(prompt('Dammi un numero tra 1 e 5'))
 }
 console.log('User number: ' + userNum); 
 
 // Get random number between 1 and 5
-const pcNum = Math.floor(Math.random() * (5 - 1) ) + 1;
+const pcNum = Math.floor(Math.random() * (max - min) ) + min;
 
 console.log('Pc number: ' + pcNum); 
 
@@ -41,3 +44,7 @@ if (sumNum % 2 == 0) {
 } else {
     console.log('La somma è un numero dispari')
 }
+
+
+
+
