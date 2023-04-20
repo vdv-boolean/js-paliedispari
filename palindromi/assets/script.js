@@ -9,13 +9,13 @@ const userWord = prompt('Dammi una parola');
 console.log('Hai scelto la parola: ' + userWord);
 
 // Check if user word is a Palindrome 
-isPalindrom(userWord);
+isPalindrome(userWord);
 
 /**************
  * Functions
 ***************/
 
-function isPalindrom(word) {
+function isPalindrome(word) {
     let reverseUserWord = word.split('').reverse().join('');
     console.log('La tua parola letta al contrario è: ' + reverseUserWord)
     if (reverseUserWord == word) {
