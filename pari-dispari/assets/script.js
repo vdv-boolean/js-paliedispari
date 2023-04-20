@@ -6,6 +6,15 @@ Stabiliamo se la somma dei due numeri è pari o dispari (usando una funzione)
 Dichiariamo chi ha vinto.
 */
 
+// Ask to user between "even" and "odd"
+let userChoice = prompt('Scegli tra pari e dispari').toLowerCase();
+
+while (!~["pari", "dispari"].indexOf(userChoice)) {
+    userChoice = prompt('Scegli tra pari e dispari');
+}
+
+console.log('Hai scelto: ' + userChoice)
+
 //Ask to user a number between 1 and 5
 let userNum = parseInt(prompt('Dammi un numero tra 1 e 5'));
 
@@ -24,3 +33,11 @@ console.log('Pc number: ' + pcNum);
 const sumNum = userNum + pcNum;
 
 console.log('Somma: ' + sumNum);
+
+// Check if sum is even or odd
+
+if (sumNum % 2 == 0) {
+    console.log('La somma è un numero pari')
+} else {
+    console.log('La somma è un numero dispari')
+}
